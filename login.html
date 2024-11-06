@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        :root {
+            --primary: #0969DA;
+            --background: #24292F;
+            --gray: #847F90;
+            --white: #FCFCFC;
+            --navbar-height: 60px;
+        }
+
+        header {
+            margin: auto;
+            width: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 14px;
+            box-shadow: 20px 30px 50px 0.1px #847f9046,
+                20px 30px 50px 0.1px #847f9046, 2px 8px 20px 0.1px #847f9046;
+            margin-top: 50px;
+        }
+
+        div {
+            padding: 50px;
+        }
+
+        div>.logo {
+            text-align: center;
+        }
+
+        input {
+            padding: 12px;
+            border-radius: 10px;
+            border: 0.1px solid;
+            background-color: rgba(250, 211, 161, 0.13);
+        }
+
+        input[type="submit"] {
+            padding: 9px;
+            background-color: var(--background);
+            border: 0;
+            border-radius: 8px;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+
+        }
+        @media (max-width: 700px) {
+            header {
+                width:100%;
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="logo"><img src="" alt="Logo"></div>
+            <h1>Seja Bem-Vindo</h1>
+            <form action="">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" placeholder="Nome de Usuario" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" placeholder="Sua Senha" required>
+                <input type="submit" value="Entrar">
+            </form>
+            <p>Não tem uma conta? <a href="cadastro.html">Criar conta</a></p>
+        </div>
+    </header>
+</body>
+
+</html>

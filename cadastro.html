@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        :root {
+            --primary: #0969DA;
+            --background: #24292F;
+            --gray: #847F90;
+            --white: #FCFCFC;
+            --navbar-height: 60px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            margin: auto;
+            width: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            background: var(--white);
+            box-shadow: 20px 20px 50px 0.1px var(--gray);
+            border-radius: 10px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid;
+        }
+
+        input[type="submit"] {
+            background: var(--background);
+            color: white;
+            margin-top: 8px;
+            margin-bottom: 5px;
+        }
+
+        .genero {
+            display: flex;
+            gap: 10px;
+            padding: 0;
+            text-align: end;
+        }
+
+        div {
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--background);
+        }
+
+        .Voltar {
+            border: 1px solid;
+            width: 10%;
+            text-align: center;
+            padding: 5px;
+            border-radius: 20px;
+        }
+
+        .Voltar:hover {
+            background-color: var(--primary);
+            color: var(--background);
+            transition: 0.5s;
+            font-weight: bolder;
+        }
+        p {
+            padding: 15px 0px;
+        }
+
+        @media (max-width: 700px) {
+            .genero {
+                display: flex;
+                flex-direction: row;
+            }
+            .radios{
+                display: flex;
+                justify-content: start;
+                gap: 10px;
+            }
+        }
+        @media (max-width: 900px) {
+            header{
+                width: 100%;
+                box-shadow: none;
+            }
+            .Voltar {
+                width: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Junte-se a Nós</h1>
+            <p>Crie agora uma conta e fique a par das sua carreira acadêmica</p>
+            <form action="">
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="seu_nome@gmail.com" required>
+
+                <label for="Nome">Primeiro Nome:</label>
+                <input type="text" name="nome" placeholder="primeiro nome" required>
+
+                <label for="sobrenome">Ultimo Nome:</label>
+                <input type="text" name="sobrenome" placeholder="Ultimo nome" required>
+
+                <label for="data_nasc">Data de Nascimento</label>
+                <input type="date" name="data_nasc" placeholder="2005/10/02" required>
+
+                <div class="genero">
+                    <label for="sexo">Genero: </label>
+                    <div class="radios">
+                        <label for="">Masculino</label> <input type="radio" name="sexo" value>
+                    </div>
+                    <div class="radios">
+                        <label for="">Femenino</label> <input type="radio" name="sexo" value>
+                    </div>
+                </div>
+
+
+                <label for="classe">Classe:</label>
+                <input type="text" name="classe" placeholder="ex: 12ª classe" required>
+                <label for="Turma">Turma:</label>
+                <input type="text" name="turma" placeholder="turma" required>
+
+
+                <label for="periodo">periodo</label>
+                <input type="text" name="periodo" placeholder="Manhã ou tarde">
+                <label for="contacto">Contacto</label>
+                <input type="number" name="contacto" placeholder="Nº Telefonico" required>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" placeholder="crie uma senha de acesso" required>
+                <input type="submit" value="Cadastrar-me">
+            </form>
+            <p class="Voltar"><a href="index.html">Voltar</a></p>
+        </div>
+    </header>
+</body>
+
+</html>
